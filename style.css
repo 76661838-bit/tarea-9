@@ -1,0 +1,289 @@
+/* --- RESET BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4; /* Fondo del body */
+    color: #333;
+}
+
+/* --- COLORES Y FUENTES --- */
+:root {
+    --dark-blue: #2B3E50; /* Color principal de cabecera y pie de página */
+    --light-gray: #f9f9f9;
+    --main-text-color: #333;
+}
+
+/* --- CABECERA --- */
+header {
+    background-color: var(--dark-blue);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    font-size: 14px;
+}
+
+.logo {
+    font-family: 'Times New Roman', serif; /* Simula un tipo de fuente diferente */
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    color: #D2D2D2;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: #ccc;
+}
+
+/* --- CONTENIDO PRINCIPAL (MAIN) --- */
+.contact-page {
+    width: 80%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px 40px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.contact-header i {
+    font-size: 30px;
+    margin-right: 10px;
+    color: #333;
+}
+
+.contact-header h2 {
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: var(--dark-blue);
+}
+
+/* Estructura de 3 columnas para el cuerpo de contacto */
+.contact-container {
+    display: flex;
+    gap: 30px;
+    padding-top: 20px;
+}
+
+/* Estilos de las 3 secciones */
+.contact-info, .contact-form, .contact-map {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* 1. INFORMACIÓN DE CONTACTO */
+.contact-info h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.info-item {
+    margin-bottom: 15px;
+}
+
+.info-item .label {
+    font-weight: bold;
+    display: inline-block;
+    width: 80px; /* Ancho fijo para las etiquetas */
+    vertical-align: top;
+}
+
+.info-item .data {
+    display: inline-block;
+    max-width: calc(100% - 85px);
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+
+.info-item .email {
+    color: var(--dark-blue);
+    text-decoration: underline;
+}
+
+.hours h4 {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid #333; /* Subrayado más grueso */
+    display: inline-block;
+    padding-bottom: 2px;
+}
+.hours p {
+    font-size: 14px;
+}
+
+/* 2. FORMULARIO */
+.contact-form {
+    border-left: 1px dashed #ccc;
+    border-right: 1px dashed #ccc;
+    padding: 0 30px;
+}
+
+.contact-form h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.send-button {
+    background-color: var(--dark-blue);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.send-button:hover {
+    background-color: #4A637C;
+}
+
+/* 3. MAPA */
+.contact-map {
+    position: relative;
+    padding-left: 20px;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 350px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    position: relative;
+    overflow: hidden;
+}
+
+.map-placeholder img {
+    /* En un entorno real, esto sería un mapa embebido (iframe) */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.map-info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 10;
+    font-size: 12px;
+}
+.map-info .stars {
+    color: gold;
+    font-size: 10px;
+}
+.map-info .rating {
+    color: var(--dark-blue);
+}
+
+.map-legend {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+}
+
+
+/* --- PIE DE PÁGINA --- */
+footer {
+    background-color: var(--dark-blue);
+    color: white;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.copyright {
+    align-self: flex-start;
+    font-size: 14px;
+}
+
+.footer-contact {
+    margin-right: auto; /* Empuja los enlaces sociales a la derecha */
+    margin-left: 50px;
+}
+
+.social-links p {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.social-links i {
+    font-size: 18px;
+    margin-left: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+/* --- RESPONSIVE (Para simular la adaptación en móviles) --- */
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-form {
+        border-left: none;
+        border-right: none;
+        border-top: 1px dashed #ccc;
+        border-bottom: 1px dashed #ccc;
+        padding: 30px 0;
+        margin-top: 20px;
+    }
+}
